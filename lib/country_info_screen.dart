@@ -23,8 +23,6 @@ class CountryInfoScreen extends StatelessWidget {
   }
 }
 
-////////////////////////////////////////
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -133,7 +131,7 @@ class _HomePageState extends State<HomePage> {
       });
 
       return;
-    }
+    }//if (countryName.isEmpty)
 
     var apiKey = "rdkae73eZpne2fUPpAJlEg==wF9vk8evRT3ySns5";
     var url =
@@ -156,10 +154,7 @@ class _HomePageState extends State<HomePage> {
           countrydata =
               "This country is $name. The capital of $name is $capital. Currency used for this country is $currencyName ($currencyCode).";
 
-          //Image flag = Image.network("https://flagsapi.com/$iso2/flat/64.png");
           flag = NetworkImage("https://flagsapi.com/$iso2/flat/64.png");
-          //print(jsonData);
-          //print(parsedJson);
 
           setState(() {});
           progressDialog.dismiss();
@@ -171,8 +166,7 @@ class _HomePageState extends State<HomePage> {
           flag = null;
           setState(() {});
         }
-      }
-      //if statement
-    }
+      } //if (parsedJson.isNotEmpty)
+    } //if (response.statusCode == 200)
   }
 }
