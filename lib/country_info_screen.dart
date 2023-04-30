@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
   TextEditingController countryNameEditingController = TextEditingController();
 
   //declare variable
-  var countrydata = "", countryName = "";
+  var countrydata = "No Data", countryName = "";
   var name = "", capital = "", currencyName = "", currencyCode = "", iso2 = "";
   final player = AudioPlayer();
   ImageProvider? flag;
